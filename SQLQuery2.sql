@@ -1,0 +1,20 @@
+CREATE TABLE Vehicles(
+VehicleID INT IDENTITY (1,1) PRIMARY KEY,
+OwnerName NVARCHAR (100) NOT NULL,
+VehicleModel NVARCHAR (100) NOT NULL,
+PlateNumber NVARCHAR(100) NOT NULL,
+ServiceType NVARCHAR(100) NOT NULL,
+CreatedAt DATETIME DEFAULT GETDATE()
+
+SELECT * FROM Vehicles;
+
+
+
+
+
+
+
+
+
+
+);

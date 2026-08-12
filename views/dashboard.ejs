@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Vehicle Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Smart Vehicles</h1>
+            <div>
+            
+                <a href="/dashboard">Dashboard</a>
+                 <a href="/vehicles">Vehicles</a>
+                <a href="/profile">Profile</a>
+                <a href="/appointments">Appointments</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to Your Dashboard</h2>
+        <p>Manage your vehicle services and maintenance from one convenient location.</p>
+    </section>
+
+    <section class="services">
+        <div class="service">
+            <h3>Total Vehicles</h3>
+            <h2><%= totalVehicles %></h2>
+            <p>Registered vehicles</p>
+        </div>
+        <div class="dashboard-cards">
+            <h3>Total Services</h3>
+            <h2><%= totalServices %></h2>
+            <p>Service requested</p>
+        </div>
+
+        <div class="dashboard-cards">  
+            <h3>Appointments</h3> 
+            <h2><%= totalAppointments %></h2>
+            <p>Scheduled appointments</p>
+        </div>
+    </section>
+
+    <section>
+<h2>Recent Vehicles</h2>
+<table border="1">
+    <tr>
+        <th>Owner Name</th>
+        <th>Vehicle Type</th>
+        <th>Plate Number</th>
+        <th>Service Type</th>
+    </tr>
+    <% recentVehicles.forEach(vehicle =>{ %>
+    <tr>
+<td><%= vehicle.OwnerName %></td>
+<td><%= vehicle.VehicleType %></td>
+<td><%vehicle.Platenumber %></td>
+<td><%vehicle.ServiceType %></td>
+</tr>
+<%}) %>
+
+</table>
+
+
+
+
+    </section>
+</body>
+</html>

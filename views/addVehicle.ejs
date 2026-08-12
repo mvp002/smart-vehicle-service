@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Vehicle</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Smart Vehicles</h1>
+            <div>
+                
+                <a href="/dashboard">Dashboard</a>
+                <a href="/vehicles">Vehicles</a>
+                <a href="/addVehicle">Add Vehicle</a>
+                <a href="/appointments">Appointments</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Add Vehicle</h2>
+        <form action="/addVehicle" method="POST">
+            
+            <label>Owner Name:</label>
+<input type="text" name="ownerName" required>
+
+<label>Vehicle Type:</label>
+<input type="text" name="vehicleType" required>
+
+<label>Plate Number:</label>
+<input type="text" name="plateNumber" required>
+
+<label>Service Type:</label>
+<input type="text" name="serviceType" required>
+
+<label>Appointment Date:</label>
+<input type="date" name="appointmentDate" required>
+            
+
+            <button type="submit">Add Vehicle</button>
+        </form>
+</body>
+</html>

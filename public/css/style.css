@@ -1,0 +1,274 @@
+body {
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+}
+header {
+    background: #0b132b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size:32px;
+}
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #0b132b;
+
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+
+}
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #0077ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.btn:hover {
+    background: #005fcc;
+}
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 28px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+nav a:hover {
+    color: #00aaff;
+    
+}
+/*======== Vehicles Table Styles ====*/
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+th{
+    background: #0b132b;
+    color: #fff;
+    padding: 15px;
+    font-size: 16px;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+/*======== Action Buttons====*/
+td a {
+    margin: 5px;
+    padding: 8px 15px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+td a first-child {
+    background: #0077ff;
+    color: #fff;
+}   
+td a:last-child {
+    background:#e63946;
+    color: #fff;
+}
+
+td a:hover {
+    opacity: 0.8;
+}
+
+/*======== Form Styles ====*/
+form {
+    width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+form label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input{
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background: #0077ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+form button:hover {
+    background: #005fcc;
+}
+/*========Dashboard cards ====*/
+.dashboard-cards {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    width: 220px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/*======== Dashboard Layout ====*/
+.dashboard-cards{
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
+}
+
+.dashboard-card  {
+   background: white;
+   width: 260px;
+    padding: 15px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-8px);
+}
+
+.dashboard-card h3 {
+    font-size: 20px;
+    color: #0b132b
+}
+
+.dashboard-card h2 {
+    font-size: 40px;
+    color: #0077ff;
+    margin-top: 15px 0;
+}
+
+.dashboard-card p {
+    color: #666;
+}
+/*=======Services page====*/
+.service-list {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.service-card:hover{
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: #0b132b;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* ===== Vehicle Search ===== */
+.search-form {
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    display: flex;
+    gap: 10px;
+}
+
+.search-form input {
+    flex: 1;
+    width: auto;
+    margin-top: 0;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.search-form button {
+    width: auto;
+    margin-top: 0;
+    padding: 12px 25px;
+}

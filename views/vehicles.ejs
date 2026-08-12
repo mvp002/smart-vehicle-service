@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicles Management</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Smart Vehicles</h1>
+            <div>
+            
+  <a href="/addVehicle" class="btn">Add Vehicle</a>
+                <a href="/dashboard">Dashboard</a>
+                <a href="/vehicles">Vehicles</a>
+                <a href="/profile">Profile</a>
+                <a href="/appointments">Appointments</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <h2>Vehicles List</h2>
+    <form action="/vehicles" method="GET" class="search-form">
+    <input
+        type="text"
+        name="search"
+        placeholder="Search by owner name or plate number"
+        value="<%= search || '' %>"
+    >
+
+    <button type="submit">Search</button>
+</form>
+    <table border="1">
+            <tr>
+                <th>Owner Name</th>
+                <th>Vehicle Type</th>
+                <th>Plate Number</th>
+                <th>Service Type</th>
+                <th>Appointment Date</th>
+                 <th>Actions</th>
+            </tr>
+        <tbody>
+            <% vehicles.forEach(vehicle => { %>
+                <tr>
+                    <td><%= vehicle.OwnerName %></td>
+                    <td><%= vehicle.VehicleType %></td>
+                    <td><%= vehicle.PlateNumber %></td>
+                    <td><%= vehicle.ServiceType %></td>
+<td>
+    <%= vehicle.AppointmentDate ? vehicle.AppointmentDate.toISOString().split('T')[0] : 'No Date' %>
+</td>      
+
+<td>
+    <a href="/editVehicle/<%= vehicle.VehicleID %>">Edit</a>
+    <a href="/deleteVehicle/<%= vehicle.VehicleID %>" onclick="return confirm('Are you sure you want to delete this vehicle?');">Delete</a>
+</td>
+
+</tr>
+            <% }) %>
+        </tbody>
+</body>
+</html>

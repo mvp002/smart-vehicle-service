@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Vehicle</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Smart Vehicles</h1>
+            <div>
+            
+                <a href="/dashboard">Dashboard</a>
+                <a href="/vehicles">Vehicles</a>
+                <a href="/addVehicle">Add Vehicle</a>
+                <a href="/appointments">Appointments</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Edit Vehicle</h2>
+        <form action="/editVehicle/<%= vehicle.VehicleID %>" method="POST">
+            <input type="hidden" name="_method" value="PUT">
+
+            <label>Owner Name:</label>
+            <input type="text" name="ownerName" value="<%= vehicle.OwnerName %>" required>
+
+            <label>Vehicle Type:</label>
+            <input type="text" name="vehicleType" value="<%= vehicle.VehicleType %>" required>
+
+            <label>Plate Number:</label>
+            <input type="text" name="plateNumber" value="<%= vehicle.PlateNumber %>" required>
+
+            <label>Service Type:</label>
+            <input type="text" name="serviceType" value="<%= vehicle.ServiceType %>" required>
+
+            <label>Appointment Date:</label>
+            <input type="date" name="appointmentDate" value="<%= vehicle.AppointmentDate ? vehicle.AppointmentDate.toISOString().split('T')[0] : '' %>" required>
+
+            <button type="submit">Update Vehicle</button>
+        </form>

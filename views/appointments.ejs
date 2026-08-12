@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - Smart Vehicles</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+   <header>
+    <nav>
+        <h1>Smart Vehicles</h1>
+        <a href="/dashboard">Dashboard</a>
+         <a href="/vehicles">Vehicles</a>
+          <a href="/services">Services</a>
+           <a href="/appointments">Appointments</a>
+            <a href="/profile">Profile</a>
+             <a href="/logout">Logout</a>
+    </nav>
+   </header>
+
+  <section class="hero">
+    <h2>Appointments</h2>
+    <p>View all scheduled vehicle service appointments.</p>
+</section>
+
+<table>
+    <thead>
+        <tr>
+            <th>Owner Name</th>
+            <th>Vehicle Type</th>
+            <th>Plate Number</th>
+            <th>Service Type</th>
+            <th>Appointment Date</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% if (appointments.length === 0) { %>
+            <tr>
+                <td colspan="5">No appointments scheduled.</td>
+            </tr>
+        <% } else { %>
+
+            <% appointments.forEach(appointment => { %>
+                <tr>
+                    <td><%= appointment.OwnerName %></td>
+                    <td><%= appointment.VehicleType %></td>
+                    <td><%= appointment.PlateNumber %></td>
+                    <td><%= appointment.ServiceType %></td>
+                    <td>
+                        <%= appointment.AppointmentDate
+                            ? appointment.AppointmentDate.toISOString().split('T')[0]
+                            : 'No Date' %>
+                    </td>
+                </tr>
+            <% }) %>
+
+        <% } %>
+    </tbody>
+</table>
+</body>
+</html>

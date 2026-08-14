@@ -20,8 +20,9 @@ const poolPromise = sql.connect(config)
         return pool;
     })
     .catch(err => {
-        console.log('Database connection failed:', err);
-    });
+    console.error('Database connection failed:', err);
+    throw err;
+});
 
 module.exports = {
     sql,
